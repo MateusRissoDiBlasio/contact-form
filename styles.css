@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    font-family: "Karla", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(148, 38%, 91%);
+    padding: 32px 16px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    padding: 24px;
+    border-radius: 12px;
+    width: 295px;
+    align-self: center;
+    h1{
+        margin-bottom: 32px;
+        color: hsl(187, 24%, 22%);
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -1px;
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    section{
+        display: flex;
+        flex-direction: column;
+        div{
+            display: flex;
+            flex-direction: column;
+            span{
+                height: 0px;
+            }  
+            label{
+                height: 24px;
+                margin-bottom: 8px;
+                color: hsl(187, 24%, 22%);
+            }  
+        }
+    }
+    label{
+        height: 24px;
+        margin-bottom: 8px;
+        color: hsl(187, 24%, 22%);
+    } 
+    span{
+        height: 0px;
+        opacity: 0;
+        color: hsl(0, 66%, 54%);
+    }
+    span.requiredMsg{
+
+        transform: translate(0, -20px);
+    }
+    #validEmailMsg{
+        transform: translate(0, -20px);
+    }
+    #queryTypeContainer{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        transform: translate(0, 3px);
+        div{
+            display: flex;
+            border: 1px solid hsl(186, 15%, 59%);
+            align-items: center;
+            border-radius: 8px;
+            height: 49px;
+            margin-bottom: 16px;
+            color: hsl(187, 24%, 22%);
+            cursor: pointer;
+            input{
+                margin-left: 25px;
+                margin-right: 10px;
+                margin-bottom: 0;
+                padding: 0;
+            }
+            input[type="radio"] {
+                appearance: none;
+                width: 19.5px;
+                height: 19.5px;
+                border: 1px solid hsl(186, 15%, 59%);
+                border-radius: 50%;
+                outline: none;
+                background-color: white;
+                cursor: pointer;
+                display: grid;
+                place-content: center;
+            }
+            input[type="radio"]:checked {
+                background-image: url('./assets/images/icon-radio-selected.svg');
+                background-size: 19.5px 19.5px;
+                background-position: center;
+                background-repeat: no-repeat;
+                border: none;
+            }
+        }
+        div:hover{
+            border: 1px solid hsl(169, 82%, 27%);
+        }
+        .generalEnquiryBackground:has(input[type="radio"]:checked), input[type="radio"]:checked {
+            background-color: hsl(148, 38%, 91%);
+        }
+        .supportRequestBackground:has(input[type="radio"]:checked), input[type="radio"]:checked{
+            background-color: hsl(148, 38%, 91%);
+        }
+    }
+    #queryType{
+        color: hsl(187, 24%, 22%);
+        margin-bottom: 13px;
+    }
+    #queryTypeErrorMsg{
+        transform: translate(0, -8px);
+    }
+    #requiredMsgError{
+        transform: translate(0, 5px);
+    }
+    #consentErrorMsg{
+        opacity: 0;
+        transform: translate(0, -42px);
+    }
+    label::after{
+        content: " *";
+        color: hsl(169, 82%, 27%);
+    }    
+}
+#checkboxConsentLabel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+    margin: 40px 0px;
+    cursor: pointer;
+    accent-color: hsl(169, 82%, 27%);
+    input{
+        margin-bottom: 0;
+    }
+    span{
+        width: 19px;
+        height: 16px;
+    }
+}
+#checkboxConsentLabel::after{
+    position: relative;
+    content: " *";
+    transform: translate(-180px, 8px);
+}
+.custom-checkbox-container input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    padding: 0;
+}
+.checkmark {
+    opacity: 1;
+    display: inline-block;
+    border: 1px solid hsl(186, 15%, 59%);
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.custom-checkbox-container input:checked ~ .checkmark {
+    background-image: url('./assets/images/icon-checkbox-check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+    font-size: 16px;
+    gap: 9px;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 24px;
+    height: 25px;
+    border-radius: 8px;
+    border: 1px solid hsl(186, 15%, 59%);
+}
+input:hover{
+    cursor: pointer;
+    border: 1px solid hsl(169, 82%, 27%);
+}
+input:focus{
+    outline: none;
+    border: 1px solid hsl(169, 82%, 27%);
+}
+input:focus.errorInput{
+    outline: none;
+    border: 1px solid hsl(0, 66%, 54%);
+}
+textarea{
+    height: 200px;
+    border: 1px solid hsl(186, 15%, 59%);
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: hsl(187, 24%, 22%);
+}
+textarea:hover{
+    cursor: pointer;
+    border: 1px solid hsl(169, 82%, 27%);
+}
+textarea:focus{
+    outline: none;
+    border: 1px solid hsl(169, 82%, 27%);
+}
+#msgLabel{
+    margin-top: 11px;
+}
+button{
+    border: none;
+    height: 59px;
+    border-radius: 8px;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+button:hover{
+    cursor: pointer;
+    background-color: hsl(169, 82%, 27%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-blend-mode: multiply;
+}
+.errorInput{
+    border: 1px solid hsl(0, 66%, 54%);
+}
+.errorMsg{
+        opacity: 1;
+}
+#messageContainer{
+    padding: 24px;
+    position: absolute;
+    width: 279px;
+    height: 83px;
+    transform: translate(-16px);
+    border-radius: 12px;
+    top: 24px;
+    background-color: hsl(187, 24%, 22%);
+    color: hsl(148, 38%, 91%);
+    opacity: 0;
+}
+#messageContainer p:first-child{
+    display: flex;
+    align-items: center;
+    height: 27px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: bold;
+    img{
+        width: 19.5px;
+        height: 19.5px;
+        margin-right: 8px;
+    }
+}
+#messageContainer p:nth-child(2){
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+.disabled{
+    pointer-events: none;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 30px;
+    a { 
+        color: hsl(169, 82%, 27%);
+    }
+}
+
+@media (min-width: 768px){
+
+    body{
+        padding: 128px 39px;
+    }
+    main{
+        padding: 40px;
+        width: 610px;
+        align-self: center;
+    }
+    form{
+        section{
+            flex-direction: row;
+            justify-content: space-between;
+            input{
+                width: 247px;
+            }
+        }
+        #queryTypeContainer{
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            div{
+                width: 295px;
+                margin-bottom: 0px;
+            }
+        }       
+    }
+    #checkboxConsentLabel{
+        height: 24px;
+        transform: translate(0, -2px);
+        span{
+            width: 14px;
+            height: 14px;
+        }
+    }
+    #checkboxConsentLabel::after{
+        transform: translate(0px, 0px);
+    }
+    .checkmark {
+        border: 2px solid hsl(186, 15%, 59%);
+    }
+    .custom-checkbox-container input:checked ~ .checkmark {
+        border: 2px solid transparent;
+    }
+    textarea{
+        height: 106px;
+    }
+    button{
+        transform: translate(0, -2px);
+    }
+    #messageContainer{
+        flex-direction: column;
+        width: 402px;
+        height: 59px;
+        transform: translateX(80px);
+    }
+}
+
+@media (min-width: 1440px){
+
+    body{
+        padding: 128px 0px;
+    }
+    main{
+        width: 656px;
+    }
+    form{
+        section{
+            input{
+                width: 270px;
+            }
+        }
+        #queryTypeContainer{
+            div{
+                width: 318px;
+            }
+        }       
+    }
+    textarea{
+        height: 79px;
+    }
+    #messageContainer{
+        flex-direction: column;
+        width: 402px;
+        height: 59px;
+        transform: translateX(103px);
+    }
+}

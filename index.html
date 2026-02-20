@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+  <main>
+    <h1>Contact Us</h1>
+
+    <form action="">
+      <section>
+        <div>
+          <label for="firstName">First Name&nbsp;</label>
+          <input id="firstName" type="text" name="firstName" autocomplete="given-name" required>
+          <span class="requiredMsg">This field is required</span>
+        </div>
+        <div>
+          <label for="lastName">Last Name&nbsp;</label>
+          <input id="lastName" type="text" name="lastName" autocomplete="family-name" required>
+          <span class="requiredMsg">This field is required</span>  
+        </div>
+        
+      </section>
+
+      <label for="emailAddress">Email Address&nbsp;</label>
+      <input id="emailAddress" name="emailAddress" type="email" autocomplete="off" required>
+      
+      <span id="validEmailMsg" >Please enter a valid email address</span>
+      <span class="requiredMsg">This field is required</span>
+
+      <label id="queryType">Query Type&nbsp;&nbsp;</label>
+      <div id="queryTypeContainer">
+        <div class="generalEnquiryBackground">
+          <input id="generalEnquiry" type="radio">General Enquiry
+        </div>
+        <div class="supportRequestBackground">
+          <input id="supportRequest" type="radio">Support Request
+        </div>
+      </div>
+      
+      <span id="queryTypeErrorMsg" class="requiredMsg">Please select a query type</span>
+
+      <label id="msgLabel" for="msg">Message&nbsp;</label>
+      <textarea name="msg" id="msg"></textarea>
+      <span id="requiredMsgError" class="requiredMsg">This field is required</span>
+
+      <label id="checkboxConsentLabel" for="checkboxConsent" class="custom-checkbox-container">
+        <input id="checkboxConsent" type="checkbox">
+        <span class="checkmark"></span>
+        I consent to being contacted by the team&nbsp;
+      </label>
+      <span id="consentErrorMsg">To submit this form, please consent to being contacted</span>
+
+      <button id="submitBtn" type="">Submit</button>
+
+      <section id="messageContainer">
+        <p><img src="./assets/images/icon-success-check.svg" alt="Success Icon Message">Message Sent!</p>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </section>
+    </form>
+  </main>
+  <script src="./index.js"></script>
+</body>
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  Coded by <a href="#">Mateus Risso Di Blasio</a>.
+</footer>
+</html>
