@@ -13,12 +13,12 @@ const checkboxConsent = document.getElementById('checkboxConsent');
 const consentErrorMsg = document.getElementById('consentErrorMsg');
 const messageContainer = document.getElementById('messageContainer');
 
-var firstNameValid = false;
-var lastNameValid = false;
-var emailAddressValid = false;
-var queryTypeValid = false;
-var msgValid = false;
-var checkboxConsentValid = false;
+let firstNameValid = false;
+let lastNameValid = false;
+let emailAddressValid = false;
+let queryTypeValid = false;
+let msgValid = false;
+let checkboxConsentValid = false;
 
 function validateEmail(email) {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
