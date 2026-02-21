@@ -20,22 +20,22 @@
       <section>
         <div>
           <label for="firstName">First Name&nbsp;</label>
-          <input id="firstName" type="text" name="firstName" autocomplete="given-name" aria-describedby="requiredMsg" aria-invalid="true" required>
-          <span class="requiredMsg" role="alert">This field is required</span>
+          <input id="firstName" type="text" name="firstName" autocomplete="given-name" aria-describedby="requiredName" aria-invalid="true" required>
+          <span id="requiredName" class="requiredMsg" role="alert">This field is required</span>
         </div>
         <div>
           <label for="lastName">Last Name&nbsp;</label>
-          <input id="lastName" type="text" name="lastName" autocomplete="family-name" aria-describedby="requiredMsg" aria-invalid="true" required>
-          <span class="requiredMsg" role="alert">This field is required</span>  
+          <input id="lastName" type="text" name="lastName" autocomplete="family-name" aria-describedby="requiredLastName" aria-invalid="true" required>
+          <span id="requiredLastName" class="requiredMsg" role="alert">This field is required</span>  
         </div>
         
       </section>
 
       <label for="emailAddress">Email Address&nbsp;</label>
-      <input id="emailAddress" name="emailAddress" type="email" autocomplete="off" aria-describedby="validEmailMsg requiredMsg" aria-invalid="true" required>
+      <input id="emailAddress" name="emailAddress" type="email" autocomplete="off" aria-describedby="validEmailMsg requiredEmail" aria-invalid="true" required>
       
       <span id="validEmailMsg" role="alert">Please enter a valid email address</span>
-      <span class="requiredMsg" role="alert">This field is required</span>
+      <span id="requiredEmail" class="requiredMsg" role="alert">This field is required</span>
 
       <label id="queryType">Query Type&nbsp;&nbsp;</label>
       <div id="queryTypeContainer" aria-labelledby="queryType" aria-describedby="queryTypeErrorMsg" aria-invalid="true">
