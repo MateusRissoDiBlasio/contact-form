@@ -38,13 +38,13 @@
       <span class="requiredMsg">This field is required</span>
 
       <label id="queryType">Query Type&nbsp;&nbsp;</label>
-      <div id="queryTypeContainer">
+      <div id="queryTypeContainer" aria-labelledby="queryType">
         <div class="generalEnquiryBackground">
-          <input id="generalEnquiry" type="radio" name="generalEnquiry" required>
+          <input id="generalEnquiry" type="radio" name="queryType" required>
           <label for="generalEnquiry">General Enquiry&nbsp;</label>
         </div>
         <div class="supportRequestBackground">
-          <input id="supportRequest" type="radio" name="supportRequest" required>
+          <input id="supportRequest" type="radio" name="queryType" required>
           <label for="supportRequest">Support Request&nbsp;</label>
         </div>
       </div>
@@ -52,7 +52,7 @@
       <span id="queryTypeErrorMsg" class="requiredMsg">Please select a query type</span>
 
       <label id="msgLabel" for="msg">Message&nbsp;</label>
-      <textarea name="msg" id="msg"></textarea>
+      <textarea name="msg" id="msg" required></textarea>
       <span id="requiredMsgError" class="requiredMsg">This field is required</span>
 
       <label id="checkboxConsentLabel" for="checkboxConsent" class="custom-checkbox-container">
