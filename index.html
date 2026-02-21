@@ -20,25 +20,25 @@
       <section>
         <div>
           <label for="firstName">First Name&nbsp;</label>
-          <input id="firstName" type="text" name="firstName" autocomplete="given-name" required>
-          <span class="requiredMsg">This field is required</span>
+          <input id="firstName" type="text" name="firstName" autocomplete="given-name" aria-describedby="requiredMsg" aria-invalid="true" required>
+          <span class="requiredMsg" role="alert">This field is required</span>
         </div>
         <div>
           <label for="lastName">Last Name&nbsp;</label>
-          <input id="lastName" type="text" name="lastName" autocomplete="family-name" required>
-          <span class="requiredMsg">This field is required</span>  
+          <input id="lastName" type="text" name="lastName" autocomplete="family-name" aria-describedby="requiredMsg" aria-invalid="true" required>
+          <span class="requiredMsg" role="alert">This field is required</span>  
         </div>
         
       </section>
 
       <label for="emailAddress">Email Address&nbsp;</label>
-      <input id="emailAddress" name="emailAddress" type="email" autocomplete="off" required>
+      <input id="emailAddress" name="emailAddress" type="email" autocomplete="off" aria-describedby="validEmailMsg requiredMsg" aria-invalid="true" required>
       
-      <span id="validEmailMsg" >Please enter a valid email address</span>
-      <span class="requiredMsg">This field is required</span>
+      <span id="validEmailMsg" role="alert">Please enter a valid email address</span>
+      <span class="requiredMsg" role="alert">This field is required</span>
 
       <label id="queryType">Query Type&nbsp;&nbsp;</label>
-      <div id="queryTypeContainer" aria-labelledby="queryType">
+      <div id="queryTypeContainer" aria-labelledby="queryType" aria-describedby="queryTypeErrorMsg" aria-invalid="true">
         <div class="generalEnquiryBackground">
           <input id="generalEnquiry" type="radio" name="queryType" required>
           <label for="generalEnquiry">General Enquiry&nbsp;</label>
@@ -49,18 +49,18 @@
         </div>
       </div>
       
-      <span id="queryTypeErrorMsg" class="requiredMsg">Please select a query type</span>
+      <span id="queryTypeErrorMsg" class="requiredMsg" role="alert">Please select a query type</span>
 
       <label id="msgLabel" for="msg">Message&nbsp;</label>
       <textarea name="msg" id="msg" required></textarea>
-      <span id="requiredMsgError" class="requiredMsg">This field is required</span>
+      <span id="requiredMsgError" class="requiredMsg" role="alert">This field is required</span>
 
       <label id="checkboxConsentLabel" for="checkboxConsent" class="custom-checkbox-container">
-        <input id="checkboxConsent" type="checkbox">
+        <input id="checkboxConsent" type="checkbox" name="checkboxConsent" aria-describedby="consentErrorMsg" aria-invalid="true" required>
         <span class="checkmark"></span>
         I consent to being contacted by the team&nbsp;
       </label>
-      <span id="consentErrorMsg">To submit this form, please consent to being contacted</span>
+      <span id="consentErrorMsg" role="alert">To submit this form, please consent to being contacted</span>
 
       <button id="submitBtn" type="submit">Submit</button>
 
