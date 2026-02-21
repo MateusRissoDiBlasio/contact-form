@@ -99,6 +99,10 @@ form{
                 background-repeat: no-repeat;
                 border: none;
             }
+            label{
+                height: 20px;
+                margin: 0;
+            }
         }
         div:hover{
             border: 1px solid hsl(169, 82%, 27%);
